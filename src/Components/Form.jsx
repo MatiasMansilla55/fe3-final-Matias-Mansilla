@@ -6,7 +6,7 @@ const Form = () => {
   const { theme } = state;
   
 
-  //Aqui deberan implementar el form completo con sus validaciones
+ 
   const [customer, setCustomer] = useState({
     name: "",
     email: "",

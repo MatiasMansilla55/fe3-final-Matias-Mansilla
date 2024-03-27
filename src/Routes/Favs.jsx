@@ -1,10 +1,9 @@
 import React from "react";
 import Card from "../Components/Card";
 import { useContextGlobal } from "../Components/utils/global.context";
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Favs = () => {
-  const { state,dispatch } = useContextGlobal();
+  const { state, dispatch } = useContextGlobal();
   const { theme } = state;
 
   const localData = localStorage.getItem("favs");
@@ -22,8 +21,8 @@ const Favs = () => {
     <div style={{ background: theme.background, color: theme.font }}>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
-       {arrayObjects.map((fav) => (
-          <Card key={fav.id} item={fav}> 
+        {arrayObjects.map((fav) => (
+          <Card key={fav.id} item={fav}>
             <button
               onClick={() => handleRemoveFromFavorites(fav.id)}
               style={{ margin: "10px" }}
@@ -32,12 +31,8 @@ const Favs = () => {
             </button>
           </Card>
         ))}
-       
       </div>
-      
     </div>
-          
-
   );
 };
 

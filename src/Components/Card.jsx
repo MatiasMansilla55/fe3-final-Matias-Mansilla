@@ -23,14 +23,12 @@ const Card = ({ item, children }) => {
   return (
     <div className="card" style={{ background: theme.background }}>
       <img src="/images/doctor.jpg" />
-      {/* En cada card deberan mostrar en name - username y el id */}
+
       <Link to={"detail/" + item.id}>
         <h3 style={{ color: theme.font }}>{item.name}</h3>
         <h3 style={{ color: theme.font }}>{item.username}</h3>
       </Link>
-      {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
 
-      {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
       <button
         style={{ color: theme.font }}
         onClick={addFav}

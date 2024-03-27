@@ -1,7 +1,7 @@
 import React from "react";
 import { useContextGlobal, themes } from "../Components/utils/global.context";
 import { Link } from "react-router-dom";
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+
 
 const Navbar = () => {
   const { state, dispatch } = useContextGlobal();
@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <nav style={{background:theme.background}} >
       <img src="/DH.ico" alt="dh-icon" />
-      {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
+  
       <Link to={"/"}>
         <h4 style={{color:theme.font}}>Home</h4>
       </Link>
@@ -29,7 +29,7 @@ const Navbar = () => {
       <Link to={"/fav"}>
         <h4 style={{color:theme.font}}>Favs</h4>
       </Link>
-      {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
+     
       <button onClick={changeTheme}>Change theme</button>
     </nav>
   );
